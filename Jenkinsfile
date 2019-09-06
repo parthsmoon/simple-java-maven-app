@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn -B -DskipTests clean package'
+        sh '/var/jenkins_home/opt/apache-maven-3.6.2/bin/mvn -B -DskipTests clean package'
       }
     }
     stage('test') {
       steps {
-        sh 'mvn test'
+        sh '/var/jenkins_home/opt/apache-maven-3.6.2/bin/mvn test'
       }
     }
   }

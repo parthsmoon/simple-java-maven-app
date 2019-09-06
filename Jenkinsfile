@@ -14,6 +14,7 @@ pipeline {
     stage('test') {
       steps {
         sh '/var/jenkins_home/opt/apache-maven-3.6.2/bin/mvn test'
+        junit 'target/surefire-reports/*.xml'
       }
     }
   }
